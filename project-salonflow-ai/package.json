@@ -1,0 +1,18 @@
+{
+  "name": "salonflow-ai-workspace",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SalonFlow AI — lance le backend (API Express, port 4000) et le frontend (Next.js, port 3000) ensemble",
+  "engines": {
+    "node": ">=20.9"
+  },
+  "scripts": {
+    "install:all": "npm install && npm install --prefix backend && npm install --prefix application",
+    "dev": "concurrently --names backend,frontend --prefix-colors magenta,cyan \"npm run dev --prefix backend\" \"npm run dev --prefix application\"",
+    "test": "npm test --prefix backend",
+    "reset-data": "npm run reset-data --prefix backend"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.7"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "salon": {
+    "name": "Salon Aminata",
+    "tagline": "Tresses, soins et coupes à Sacré-Cœur, Dakar",
+    "address": "Sacré-Cœur 3, Dakar",
+    "phone": "+221 77 000 00 00",
+    "seats": 2,
+    "slotStepMinutes": 30,
+    "openingHours": {
+      "1": ["09:00", "19:00"],
+      "2": ["09:00", "19:00"],
+      "3": ["09:00", "19:00"],
+      "4": ["09:00", "19:00"],
+      "5": ["09:00", "19:00"],
+      "6": ["09:00", "17:00"]
+    }
+  },
+  "services": [
+    { "id": "tresses-box", "name": "Box braids", "category": "Tresses", "durationMinutes": 240, "priceFcfa": 25000, "description": "Tresses individuelles, longueur épaules à mi-dos." },
+    { "id": "nattes-collees", "name": "Nattes collées", "category": "Tresses", "durationMinutes": 90, "priceFcfa": 8000, "description": "Nattes plaquées, motif au choix." },
+    { "id": "vanilles", "name": "Vanilles", "category": "Tresses", "durationMinutes": 150, "priceFcfa": 15000, "description": "Twists à deux brins, mèches comprises." },
+    { "id": "soin-profond", "name": "Soin profond", "category": "Soins", "durationMinutes": 60, "priceFcfa": 7000, "description": "Bain d'huile, masque nourrissant et massage du cuir chevelu." },
+    { "id": "brushing", "name": "Brushing", "category": "Soins", "durationMinutes": 45, "priceFcfa": 5000, "description": "Lavage, séchage et mise en forme." },
+    { "id": "coupe-homme", "name": "Coupe homme", "category": "Coupes", "durationMinutes": 30, "priceFcfa": 3000, "description": "Coupe tondeuse et ciseaux, contours nets." },
+    { "id": "coupe-enfant", "name": "Coupe enfant", "category": "Coupes", "durationMinutes": 30, "priceFcfa": 2000, "description": "Pour les moins de 12 ans." }
+  ]
+}

@@ -1,0 +1,5 @@
+node_modules/
+dist/
+.env
+data/bookings.json
+data/bookings.json.tmp

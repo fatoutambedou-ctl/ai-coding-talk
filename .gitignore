@@ -1,0 +1,24 @@
+# Dépendances et builds
+node_modules/
+presentation/source/node_modules/
+.next/
+out/
+dist/
+*.tsbuildinfo
+next-env.d.ts
+
+# Secrets : seuls les .env.example sont publiés
+.env
+.env.*
+!.env.example
+
+# Données locales (noms et téléphones de réservations)
+project-salonflow-ai/backend/data/bookings.json
+project-salonflow-ai/backend/data/*.tmp
+
+# Système et éditeurs
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log

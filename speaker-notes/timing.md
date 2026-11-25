@@ -10,9 +10,9 @@ Durée totale : **20:00** pour 12 slides. Débit cible : 100 à 125 mots par min
 | 4 | Les outils qui changent la donne | 2:00 | 4:00 | 6:00 | 213 |  |
 | 5 | Comment fonctionne Claude Code ? | 1:30 | 6:00 | 7:30 | 145 |  |
 | 6 | De l'idée au produit : le workflow | 1:30 | 7:30 | 9:00 | 142 |  |
-| 7 | SalonFlow AI | 1:00 | 9:00 | 10:00 | 109 |  |
-| 8 | Démo live | 5:00 | 10:00 | 15:00 | 227 | Interaction |
-| 9 | Ce qui se passe derrière l'écran | 2:00 | 15:00 | 17:00 | 230 |  |
+| 7 | SalonFlow AI | 1:00 | 9:00 | 10:00 | 118 |  |
+| 8 | Démo live | 5:00 | 10:00 | 15:00 | 243 | Interaction |
+| 9 | Ce qui se passe derrière l'écran | 2:00 | 15:00 | 17:00 | 233 |  |
 | 10 | Les limites de l'IA | 1:00 | 17:00 | 18:00 | 111 |  |
 | 11 | Les opportunités | 1:00 | 18:00 | 19:00 | 113 |  |
 | 12 | Le code n'est plus la barrière | 1:00 | 19:00 | 20:00 | 91 |  |

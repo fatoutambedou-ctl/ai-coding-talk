@@ -187,7 +187,7 @@ La cliente voit le salon, ses prestations, les prix en francs CFA et la durée d
 
 Aminata a son espace professionnel : l'agenda du jour, le chiffre prévu, et elle marque chaque rendez-vous comme honoré ou annulé.
 
-Côté technique : Next.js, TypeScript, Tailwind, et un simple fichier de données. Pas de serveur à configurer, pas de compte à créer. C'est un MVP : le minimum qui prouve que l'idée fonctionne.
+Côté technique, deux programmes : un frontend Next.js pour l'affichage, et un backend Express qui applique les règles et enregistre les réservations dans un fichier JSON. Une seule commande lance tout. C'est un MVP : le minimum qui prouve que l'idée fonctionne.
 
 Assez parlé. On passe à l'écran.
 
@@ -221,7 +221,7 @@ Assez parlé. On passe à l'écran.
 
 [2:45 – 4:00] Coller le prompt d'amélioration avec la couleur choisie. Commenter : « Je ne lui dis pas comment coder, je lui dis ce que je veux voir. » Recharger, montrer le résultat.
 
-[4:00 – 5:00] Basculer sur la version complète de SalonFlow AI (onglet déjà ouvert sur le port 3000) : réserver, ouvrir « Mes rendez-vous », puis l'espace pro avec l'agenda. « Ce que vous venez de voir en deux minutes, c'est le premier jet. Voici ce qu'il devient avec quelques heures d'itérations. »
+[4:00 – 5:00] Basculer sur la version complète de SalonFlow AI (onglet déjà ouvert sur le port 3000) : réserver, ouvrir « Mes rendez-vous », puis l'espace pro avec l'agenda. Montrer le terminal 1 : le backend (port 4000) et le frontend (port 3000) tournent ensemble. « Ce que vous venez de voir en deux minutes, c'est le premier jet. Voici ce qu'il devient avec quelques heures d'itérations. »
 
 **Message essentiel :** Une instruction en français devient une interface qui fonctionne.
 
@@ -241,11 +241,11 @@ Assez parlé. On passe à l'écran.
 
 Revenons sur ce qu'on vient de voir, parce qu'il ne faut pas confondre « ça marche » et « c'est magique ».
 
-À gauche, les fichiers. Les pages : l'accueil, la réservation, mes rendez-vous, l'espace pro. Des composants réutilisables. Et un dossier lib avec la logique : le calcul des créneaux, la validation des numéros, le stockage.
+À gauche, les fichiers. Dans application, le frontend : les pages, l'accueil, la réservation, mes rendez-vous, l'espace pro, et des composants réutilisables. Dans backend, l'API : les routes, et la logique, c'est-à-dire le calcul des créneaux, la validation des numéros, le stockage.
 
 Le frontend et le backend sont deux programmes séparés : l'un affiche les pages, l'autre applique les règles et garde les données, et ils communiquent par une API.
 
-À droite, le chemin d'une réservation. Le navigateur affiche la page. Quand la cliente choisit une date, la page demande au serveur les créneaux libres. Quand elle confirme, le serveur revérifie que le créneau est toujours libre avant d'écrire dans le fichier de données.
+À droite, le chemin d'une réservation. Le navigateur affiche la page. Quand la cliente choisit une date, la page demande à l'API les créneaux libres. Quand elle confirme, l'API revérifie que le créneau est toujours libre avant d'écrire dans bookings.json.
 
 Pourquoi revérifier ? Parce que deux clientes peuvent cliquer sur le même créneau à la même seconde. Le salon a deux postes : la troisième réservation sur le même créneau est refusée. Ce genre de détail, l'IA l'implémente très bien… à condition qu'on le lui demande, ou qu'on vérifie qu'elle l'a fait.
 

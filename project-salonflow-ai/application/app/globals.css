@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+/*
+ * Charte « nuit & citron » : grands titres serrés, étiquettes en police mono,
+ * zones sombres quadrillées et accent vert citron. Polices servies en local (fonctionne hors ligne).
+ */
+@theme {
+  --color-ink: #15171a;
+  --color-night: #0e1013;
+  --color-coal: #1b1e23;
+  --color-paper: #f6f6f3;
+  --color-lime: #d7f34a;
+  --color-lime-soft: #f3ffb5;
+  --color-mist: #ecece6;
+  --color-muted: #5b6068;
+  --color-line: #e2e2dc;
+  --color-danger: #c62f35;
+  --color-success: #2f9e5b;
+  --font-display: "Schibsted Grotesk", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-sans: "Schibsted Grotesk", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+}
+
+html { color-scheme: light; }
+body { background: var(--color-paper); color: var(--color-ink); font-family: var(--font-sans); }
+
+/* Titres : très gras, interlettrage serré. */
+.display { font-family: var(--font-display); font-weight: 800; letter-spacing: -0.035em; line-height: 1.02; }
+
+/* Étiquettes en capitales, police mono. */
+.eyebrow { font-family: var(--font-mono); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
+
+/* Fond sombre quadrillé avec halo citron (accueil et en-têtes de page). */
+.night-grid {
+  background-color: var(--color-night);
+  background-image:
+    radial-gradient(ellipse 60% 70% at 78% 35%, rgba(215, 243, 74, 0.16), transparent 60%),
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: auto, 48px 48px, 48px 48px;
+}
+
+/* Texte en dégradé citron → blanc. */
+.text-lime-gradient {
+  background-image: linear-gradient(92deg, #d7f34a 0%, #f3ffb5 45%, #ffffff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Carte sombre en relief. */
+.card-dark {
+  background: var(--color-coal);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 22px;
+  box-shadow: 0 30px 80px -30px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+:focus-visible { outline: 3px solid var(--color-lime); outline-offset: 2px; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+}
